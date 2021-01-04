@@ -1,23 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-
 body {
   font-family: Roboto, sans-serif;
 }
+
 #container {
   margin: auto;
 }
+
 header {
   display: flex;
   justify-content: center
-  
 }
+
 .header_logo {
   width: 165px;
   padding: 15px;
 }
-#search {
-}
+
+#search {}
+
 #localisation {
   display: flex;
   justify-content: center;
@@ -26,9 +28,11 @@ header {
   height: 50px;
   box-shadow: inset 0px 10px 10px #c4c4c4;
 }
+
 #map i {
-margin-right: 20px;
+  margin-right: 20px;
 }
+
 #baseline {
   display: flex;
   flex-direction: column;
@@ -55,8 +59,9 @@ margin-right: 20px;
   background-color: #ff79da;
   box-shadow: inset 0px -100px 50px -75px #9356dc;
 }
-#fonctionnement {
-}
+
+#fonctionnement {}
+
 .button {
   display: flex;
   justify-content: flex-start;
@@ -80,9 +85,8 @@ margin-right: 20px;
   background-color: #9356dc;
   color: white;
 }
-.fa-mobile-alt,
-.fa-list,
-.fa-store {
+
+.fa-mobile-alt, .fa-list, .fa-store {
   color: #727272;
   padding: 25px;
 }
@@ -161,10 +165,12 @@ margin-right: 20px;
   justify-content: left;
   flex: 1;
 }
+
 h3 {
   line-height: 1em;
   margin: 5px;
 }
+
 .p1 {
   margin: 2px 2px 2px 5px;
 }
@@ -175,23 +181,98 @@ h3 {
   margin: 5px 20px 0 0;
 }
 
-
-
 footer {
   background-color: #353535;
   padding: 5px 15px;
 }
+
 .footer_logo {
   width: 100px;
 }
+
 .ShrikhandFont {
   font-family: Shrikhand, sans-serif;
   font-size: 1.1em;
   margin-top: auto;
 }
-.fa-utensils,
-.fa-hands-helping,
-.footer_text {
+
+.fa-utensils, .fa-hands-helping, .footer_text {
   color: white;
   padding-right: 10px;
+}
+
+/*  La Palette  */
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.photo_resto {
+  background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+.titre_resto {
+  font-family: Shrikhand, sans-serif;
+  font-size: 1.1em;
+  margin-top: auto;
+}
+
+#menu_container {
+  border: solid red;
+  width: auto;
+  height: auto;
+}
+
+#entrees {
+  border: solid rgb(115, 57, 209);
+  width: auto;
+  height: auto;
+}
+
+#plats {
+  border: solid rgb(115, 57, 209);
+  width: auto;
+  height: 200px;
+}
+
+#desserts {
+  border: solid rgb(115, 57, 209);
+  width: auto;
+  height: 200px;
+}
+
+.plat {
+  display: flex;
+  justify-content: flex-start;
+  width: 320px;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  box-shadow: 1px 1px 1em 0em #353535;
+  margin: 15px;
+}
+
+.text_plat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  padding-left: 10px ;
+}
+.h3_plat {
+  margin: 0 0 0 5px;
+}
+
+.p_plat{
+  margin: 5px 0 0 0;
+}
+
+.price {
+  display: flex;
+  justify-content: center;
+  margin: 30px 10px 0 0;
 }
