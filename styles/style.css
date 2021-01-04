@@ -10,15 +10,22 @@ body {
 
 header {
   display: flex;
-  justify-content: center
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .header_logo {
   width: 165px;
   padding: 15px;
 }
-
-#search {}
+.header__arrow {
+  display: flex;
+  text-align: left;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
 
 #localisation {
   display: flex;
@@ -41,13 +48,23 @@ header {
   font-weight: 700;
   background-color: #f6f6f6;
 }
-
-#explore {
+/**/
+#explore,
+#commander {
   display: flex;
   justify-content: center;
+  box-shadow: offset 5px 5px 5px 10px #646464;
 }
 
-#button_explore {
+#explore :hover,
+#commander :hover{
+  display: flex;
+  justify-content: center;
+  box-shadow: offset 5px 5px 5px 10px #131313;
+}
+
+#button_explore,
+#button_commander {
   display: flex;
   width: 250px;
   height: 50px;
@@ -57,16 +74,38 @@ header {
   color: #fff;
   border-radius: 25px;
   background-color: #ff79da;
-  box-shadow: inset 0px -100px 50px -75px #9356dc;
+  box-shadow: inset 0px -100px 50px -75px #9356dc; 
+  margin-bottom: 30px;
 }
 
-#fonctionnement {}
+#button_explore :hover,
+#button_commander :hover {
+  /* Au survol, la couleur de fond des boutons principaux devra légèrement s’éclaircir. */
+  /* L’ombre portée devra également être plus visible. */
+  display: flex;
+  width: 250px;
+  height: 50px;
+  font-size: 1.2rem;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 25px;
+  background-color: #ffa9e7;
+  box-shadow: inset 0px -100px 50px -75px #bd87ff;
+  box-shadow:  1px 1px 1em 0em #050505;
+  margin-bottom: 20px;
+  transition: 1000ms;
+}
+
+#fonctionnement {
+  padding: 15px;
+}
 
 .button {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 320px;
+  width: auto;
   height: 4rem;
   border-radius: 20px;
   background-color: #f6f6f6;
@@ -86,23 +125,29 @@ header {
   color: white;
 }
 
-.fa-mobile-alt, .fa-list, .fa-store {
+.fa-mobile-alt,
+.fa-list,
+.fa-store {
   color: #727272;
-  padding: 25px;
+  padding: 15px;
 }
-
+.text_fonctionnement {
+  font-weight: 700;
+}
 #restaurants {
   background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 20px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 335px;
+  /*width: 335px;*/
+  width: auto;
   height: 250px;
   border-radius: 12px;
   box-shadow: 1px 1px 1em 0em #353535;
@@ -116,7 +161,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   border-radius: 12px 12px 0 0;
-  width: 335px;
+  width: auto;
   height: 175px;
 }
 
@@ -127,7 +172,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   border-radius: 12px 12px 0 0;
-  width: 335px;
+  width: auto;
   height: 175px;
 }
 
@@ -138,7 +183,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   border-radius: 12px 12px 0 0;
-  width: 335px;
+  width: auto;
   height: 175px;
 }
 
@@ -149,7 +194,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   border-radius: 12px 12px 0 0;
-  width: 335px;
+  width: auto;
   height: 175px;
 }
 
@@ -164,6 +209,7 @@ header {
   flex-direction: column;
   justify-content: left;
   flex: 1;
+  padding-left: 10px;
 }
 
 h3 {
@@ -183,7 +229,7 @@ h3 {
 
 footer {
   background-color: #353535;
-  padding: 5px 15px;
+  padding: 20px 15px;
 }
 
 .footer_logo {
@@ -196,9 +242,15 @@ footer {
   margin-top: auto;
 }
 
-.fa-utensils, .fa-hands-helping, .footer_text {
+.fa-utensils,
+.fa-hands-helping,
+.footer_text {
   color: white;
   padding-right: 10px;
+}
+.footer_text a{
+  text-decoration: none;
+  color: white;
 }
 
 /*  La Palette  */
@@ -208,52 +260,82 @@ a {
   color: black;
 }
 
-.photo_resto {
+.photo_resto1 {
   background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   width: 100%;
   height: 300px;
   background-size: cover;
   background-position: center;
 }
+#photo_resto2 {
+  background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+#photo_resto3 {
+  background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+#photo_resto4 {
+  background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+#menu_container {
+  width: auto;
+  height: auto;
+  border-radius: 30px 30px 0 0;
+  margin-top: -60px;
+  padding: 15px;
+  background-color: #f6f6f6;
+  padding: 15px;
+}
+
+#menu_title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 
 .titre_resto {
   font-family: Shrikhand, sans-serif;
   font-size: 1.1em;
   margin-top: auto;
+  flex: 1;
 }
-
-#menu_container {
-  border: solid red;
-  width: auto;
-  height: auto;
-}
-
-#entrees {
-  border: solid rgb(115, 57, 209);
-  width: auto;
-  height: auto;
-}
-
-#plats {
-  border: solid rgb(115, 57, 209);
-  width: auto;
-  height: 200px;
-}
-
+#entrees,
+#plats,
 #desserts {
-  border: solid rgb(115, 57, 209);
   width: auto;
-  height: 200px;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+.trait_vert {
+  display: flex;
+  border-bottom: solid 4px #99e2d0;
+  width: 60px;
+  margin-top: -15px;
 }
 
 .plat {
   display: flex;
   justify-content: flex-start;
-  width: 320px;
-  border-radius: 20px;
-  background-color: #f6f6f6;
+  width: auto;
+  border-radius: 15px;
+  background-color: #ffffff;
   box-shadow: 1px 1px 1em 0em #353535;
-  margin: 15px;
+  margin: 15px 0;
+  padding: 10px 0 10px 10px;
+  position: relative;
 }
 
 .text_plat {
@@ -261,18 +343,24 @@ a {
   flex-direction: column;
   justify-content: center;
   flex: 1;
-  padding-left: 10px ;
+  padding: 0px;
 }
 .h3_plat {
-  margin: 0 0 0 5px;
+  margin: 0 40px 0 0;
+  font-size: 1em;
 }
 
-.p_plat{
-  margin: 5px 0 0 0;
+.p_plat {
+  margin: 0px 50px 0 0;
+  font-size: 0.85em;
+  padding-top: 5px;
 }
 
 .price {
+  font-weight: 700;
   display: flex;
   justify-content: center;
-  margin: 30px 10px 0 0;
+  position: absolute;
+  bottom: 9px;
+  right: 15px;
 }
