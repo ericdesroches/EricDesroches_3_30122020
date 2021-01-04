@@ -48,19 +48,11 @@ header {
   font-weight: 700;
   background-color: #f6f6f6;
 }
-/**/
+
 #explore,
 #commander {
   display: flex;
   justify-content: center;
-  box-shadow: offset 5px 5px 5px 10px #646464;
-}
-
-#explore :hover,
-#commander :hover{
-  display: flex;
-  justify-content: center;
-  box-shadow: offset 5px 5px 5px 10px #131313;
 }
 
 #button_explore,
@@ -73,8 +65,8 @@ header {
   align-items: center;
   color: #fff;
   border-radius: 25px;
-  background-color: #ff79da;
-  box-shadow: inset 0px -100px 50px -75px #9356dc; 
+  background-color:#FF79DA;
+  box-shadow: inset -10px -10px 30px 5px #9356DC,  1px 1px 36px 2px rgba(133, 133, 133, 0.84);
   margin-bottom: 30px;
 }
 
@@ -91,8 +83,7 @@ header {
   color: #fff;
   border-radius: 25px;
   background-color: #ffa9e7;
-  box-shadow: inset 0px -100px 50px -75px #bd87ff;
-  box-shadow:  1px 1px 1em 0em #050505;
+  box-shadow: inset -10px -10px 30px 5px #b881fa, 0 0 2em rgb(134, 134, 134);
   margin-bottom: 20px;
   transition: 1000ms;
 }
