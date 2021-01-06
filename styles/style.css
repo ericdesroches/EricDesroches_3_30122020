@@ -65,8 +65,9 @@ header {
   align-items: center;
   color: #fff;
   border-radius: 25px;
-  background-color:#FF79DA;
-  box-shadow: inset -10px -10px 30px 5px #9356DC, 1px 3px 10px 1px rgb(75, 75, 75) ;
+  background-color: #ff79da;
+  box-shadow: inset -10px -10px 30px 5px #9356dc,
+    1px 3px 10px 1px rgb(75, 75, 75);
   margin-bottom: 30px;
 }
 
@@ -74,18 +75,11 @@ header {
 #button_commander:hover {
   /* Au survol, la couleur de fond des boutons principaux devra légèrement s’éclaircir. */
   /* L’ombre portée devra également être plus visible. */
-  display: flex;
-  width: 250px;
-  height: 50px;
-  font-size: 1.2rem;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  border-radius: 25px;
+
   background-color: #ffa9e7;
-  box-shadow: inset -10px -10px 30px 5px #b881fa, 1px 3px 10px 1px rgb(49, 49, 49);
-  margin-bottom: 20px;
-  transition: 2s;
+  box-shadow: inset -10px -10px 30px 5px #b881fa,
+    1px 3px 10px 1px rgb(49, 49, 49);
+  transition: 1s;
 }
 
 #fonctionnement {
@@ -100,7 +94,6 @@ header {
   height: 4rem;
   border-radius: 20px;
   background-color: #f6f6f6;
-  
   box-shadow: 1px 3px 10px 1px gray;
   margin: 15px;
 }
@@ -108,15 +101,14 @@ header {
 .button:hover {
   /* Au survol, la couleur de fond des boutons principaux devra légèrement s’éclaircir. */
   /* L’ombre portée devra également être plus visible. */
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: auto;
-  height: 4rem;
-  border-radius: 20px;
   background-color: #f3e3fd;
   box-shadow: 1px 3px 10px 1px rgb(75, 75, 75);
   transition: 2s;
+}
+.button:hover i {
+  /* Au survol, la couleur de fond des boutons principaux devra légèrement s’éclaircir. */
+  /* L’ombre portée devra également être plus visible. */
+  color: #631fb6;
 }
 
 .number {
@@ -178,7 +170,6 @@ header {
   border-radius: 12px 12px 0 0;
   width: auto;
   height: 175px;
-  
 }
 
 #image2 {
@@ -215,7 +206,7 @@ header {
 }
 
 .new {
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   color: #024d3a;
   text-align: center;
   line-height: 30px;
@@ -231,6 +222,7 @@ header {
   display: flex;
   height: 4em;
   margin-top: 12px;
+  position: relative;
 }
 
 .text {
@@ -250,11 +242,27 @@ h3 {
   margin: 2px 2px 2px 5px;
 }
 
-.fa-heart {
+.far.fa-heart {
+  font-size: 1.5em;
+  display: block;
+  margin: 5px 20px 0 0;
+}
+
+.fas.fa-heart {
   font-size: 1.5em;
   display: flex;
   margin: 5px 20px 0 0;
-  color: black;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+}
+.fas.fa-heart:hover {
+  font-size: 1.5em;
+  opacity: 1;
+  background: -webkit-linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 1s;
 }
 
 footer {
@@ -278,12 +286,12 @@ footer {
   color: white;
   padding-right: 10px;
 }
-.footer_text a{
+.footer_text a {
   text-decoration: none;
   color: white;
 }
 
-/*  La Palette  */
+/*  pages menus  */
 
 a {
   text-decoration: none;
@@ -395,7 +403,3 @@ a {
   right: 15px;
 }
 
-.icon :hover{
-  background-color: #631fb6;
-  transition-duration: 1000ms;
-}
