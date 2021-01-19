@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+
+
+/* Animation AVEC check box */ /* Animation AVEC check box */ /* Animation AVEC check box */
+
+/*  https://ensweb.users.info.unicaen.fr/TW1/pres/anim/
+
+<div class="conteneur" style="background-color: aquamarine">
+.conteneur
+      <div class="bouge" style="background-color: gold; display: inline-block;">
+.bouge
+      </div>
+    </div>
+
+.conteneur .bouge {
+  transition: 1s;
+}
+.conteneur:hover .bouge {
+  transform: translate(60px);
+}
+.conteneur .bouge
+C'est le survol de la grande boîte qui déclenche le mouvement de la petite*/
+
+.plat /*.check*/ {
+    display: flex;
+    justify-content: flex-start;
+    width: auto;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 10px 1px #353535;
+    margin: 15px 0;
+    padding: 10px 0 10px 10px;
+    position: relative;
+    /**/
+    overflow: hidden;
+  }
+  .plat:hover /*.check*/ {
+    /**/animation: check 2s;
+  }
+  .text_plat {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .h3_plat {
+    margin: 0;
+    font-size: 1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .p_plat {
+    margin: 0;
+    font-size: 0.85em;
+    padding-top: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .price {
+    font-weight: 700;
+    display: flex;
+    margin: 0 10px;
+    position: absolute;
+    bottom: 9px;
+    right: 15px;
+    animation: price 2s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes price {
+    0% {
+      position: absolute;
+      right: 70px;
+    }
+    100% {
+      position: absolute;
+      right: 70px;
+    }
+  }
+  
+  .check {
+  
+    width: 50px;
+    height: 60px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: check 2s;
+    /*animation-fill-mode: forwards;*/
+  }
+  /**/
+  @keyframes check {
+    0% {
+      position: absolute;
+      right: -90px;
+    }
+    100% {
+      position: absolute;
+      right: 0px;
+    }
+  }
+  
+  .pg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 60px;
+  }
+  .green_bkg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    width: 50px;
+    height: 60px;
+  }
+  
+  .circle {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    transform: rotate(0.5turn);
+    animation: rotateCircle 2s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes rotateCircle {
+    0% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+/* Animation AVEC check box */ /* Animation AVEC check box */ /* Animation AVEC check box */
