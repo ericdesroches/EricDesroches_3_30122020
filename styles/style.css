@@ -416,7 +416,7 @@ a {
 }
 
 /**/
-.plat {
+.plat1 {
   display: flex;
   justify-content: flex-start;
   width: auto;
@@ -427,7 +427,49 @@ a {
   padding: 10px 0 10px 10px;
   position: relative;
   overflow: hidden;
-  animation: A3 3s;
+  animation: A3 2000ms;
+  animation-delay: 1500ms;
+}
+.plat2 {
+  display: flex;
+  justify-content: flex-start;
+  width: auto;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 10px 0em #353535;
+  margin: 15px 0;
+  padding: 10px 0 10px 10px;
+  position: relative;
+  overflow: hidden;
+  animation: A3 2330ms;
+  animation-delay: 1500ms;
+}
+.plat3 {
+  display: flex;
+  justify-content: flex-start;
+  width: auto;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 10px 0em #353535;
+  margin: 15px 0;
+  padding: 10px 0 10px 10px;
+  position: relative;
+  overflow: hidden;
+  animation: A3 2660ms;
+  animation-delay: 1500ms;
+}
+.plat4 {
+  display: flex;
+  justify-content: flex-start;
+  width: auto;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 10px 0em #353535;
+  margin: 15px 0;
+  padding: 10px 0 10px 10px;
+  position: relative;
+  overflow: hidden;
+  animation: A3 3000ms;
   animation-delay: 1500ms;
 }
 
@@ -447,8 +489,8 @@ a {
 }
 /* Animation check box */ /* Animation check box */ /* Animation check box */
 .text_plat {
-  flex-direction: column;
-  justify-content: center;
+  /*flex-direction: column;
+  justify-content: center;*/
 
   padding: 0px;
   overflow: hidden;
@@ -470,12 +512,20 @@ a {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.plat:hover .p_plat {
+/*.plat1:hover .p_plat {
   transition: 1s;
-  
 }
+.plat2:hover .p_plat {
+  transition: 1s;
+}
+.plat3:hover .p_plat {
+  transition: 1s;
+}
+.plat4:hover .p_plat {
+  transition: 1s;
+}*/
 .price {
-  font-weight: 700;
+  /**/font-weight: bold;
   display: flex;
   justify-content: center;
   position: absolute;
@@ -483,12 +533,17 @@ a {
   right: 15px;
   transition: 1s;
 }
-.plat:hover .price {
+.plat1:hover .price {
   transform: translate(-50px);
-  transition: 1s;
-  animation-fill-mode: forwards;
-  
-  
+}
+.plat2:hover .price {
+  transform: translate(-50px);
+}
+.plat3:hover .price {
+  transform: translate(-50px);
+}
+.plat4:hover .price {
+  transform: translate(-50px);
 }
 .check {
   width: auto;
@@ -499,12 +554,20 @@ a {
   position: absolute;
   top: 0;
   right: -50px;
-}
-/**/
-.plat .check {
   transition: 1s;
 }
-.plat:hover .check {
+.plat1:hover .check {
+  transform: translate(-50px);
+}
+.plat2:hover .check {
+  transform: translate(-50px);
+  transition: 1s;
+}
+.plat3:hover .check {
+  transform: translate(-50px);
+  transition: 1s;
+}
+.plat4:hover .check {
   transform: translate(-50px);
   transition: 1s;
 }
@@ -523,15 +586,26 @@ a {
   color: white;
   font-size: 1.2em;
 }
-.plat:hover .circle {
+.plat1:hover .circle {
+  animation: circle 1s;
+}
+.plat2:hover .circle {
+  animation: circle 1s;
+}
+.plat3:hover .circle {
+  animation: circle 1s;
+}
+.plat4:hover .circle {
   animation: circle 1s;
 }
 @keyframes circle {
   0% {
     transform: rotate(-360deg);
+    animation-direction: alternate;
   }
   100% {
     transform: rotate(0deg);
+    animation-direction: alternate;
   }
 }
 
