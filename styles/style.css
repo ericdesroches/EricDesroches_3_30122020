@@ -488,6 +488,7 @@ a {
   justify-content: center;*/
   padding: 0px;
   overflow: hidden;
+  
   /*text-overflow: ellipsis;*/
 }
 .h3_plat {
@@ -497,14 +498,41 @@ a {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+/* animation décalage texte vers la gauche */
+.plat1:hover .text_plat {
+  animation: text 1s;
+  animation-fill-mode: forwards;
+}
+.plat2:hover .text_plat {
+  animation: text 1s;
+  animation-fill-mode: forwards;
+}
+.plat3:hover .text_plat {
+  animation: text 1s;
+  animation-fill-mode: forwards;
+}
+.plat4:hover .text_plat {
+  animation: text 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes text {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 80%;
+  }
+}
 .p_plat {
   margin: 0px 50px 0 0;
   font-size: 0.85em;
-  padding-top: 5px;
+  padding-top: 6px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
 /* Animation check box */ /* Animation check box */ /* Animation check box */
 .price {
   font-weight: bold;
