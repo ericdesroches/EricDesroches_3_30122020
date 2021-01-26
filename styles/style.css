@@ -484,45 +484,24 @@ a {
   }
 }
 .text_plat {
-  /*flex-direction: column;
-  justify-content: center;*/
   padding: 0px;
   overflow: hidden;
-  
-  /*text-overflow: ellipsis;*/
+  transition: width 1s;
+  width: 100%;
+}
+/* animation décalage texte vers la gauche */
+.plat1:hover .text_plat,
+.plat2:hover .text_plat,
+.plat3:hover .text_plat,
+.plat4:hover .text_plat {
+  width: 80%;
 }
 .h3_plat {
-  margin: 0 50px 0 0;
+  margin: 0px 50px 0 0;
   font-size: 1em;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-/* animation décalage texte vers la gauche */
-.plat1:hover .text_plat {
-  animation: text 1s;
-  animation-fill-mode: forwards;
-}
-.plat2:hover .text_plat {
-  animation: text 1s;
-  animation-fill-mode: forwards;
-}
-.plat3:hover .text_plat {
-  animation: text 1s;
-  animation-fill-mode: forwards;
-}
-.plat4:hover .text_plat {
-  animation: text 1s;
-  animation-fill-mode: forwards;
-}
-@keyframes text {
-  0% {
-    width: 100%;
-  }
-  100% {
-    width: 80%;
-  }
 }
 .p_plat {
   margin: 0px 50px 0 0;
@@ -543,15 +522,9 @@ a {
   right: 15px;
   transition: 1s;
 }
-.plat1:hover .price {
-  transform: translate(-50px);
-}
-.plat2:hover .price {
-  transform: translate(-50px);
-}
-.plat3:hover .price {
-  transform: translate(-50px);
-}
+.plat1:hover .price,
+.plat2:hover .price,
+.plat3:hover .price,
 .plat4:hover .price {
   transform: translate(-50px);
 }
@@ -566,17 +539,9 @@ a {
   right: -50px;
   transition: 1s;
 }
-.plat1:hover .check {
-  transform: translate(-50px);
-}
-.plat2:hover .check {
-  transform: translate(-50px);
-  transition: 1s;
-}
-.plat3:hover .check {
-  transform: translate(-50px);
-  transition: 1s;
-}
+.plat1:hover .check,
+.plat2:hover .check,
+.plat3:hover .check,
 .plat4:hover .check {
   transform: translate(-50px);
   transition: 1s;
@@ -595,27 +560,21 @@ a {
   align-items: center;
   color: white;
   font-size: 1.2em;
+  /*transition: 1s;*/
 }
-.plat1:hover .circle {
-  animation: circle 1s;
-}
-.plat2:hover .circle {
-  animation: circle 1s;
-}
-.plat3:hover .circle {
-  animation: circle 1s;
-}
+/* Animation rotation cercle check box */ /* Animation rotation cercle check box */ /* Animation rotation cercle check box */
+.plat1:hover .circle,
+.plat2:hover .circle,
+.plat3:hover .circle,
 .plat4:hover .circle {
   animation: circle 1s;
 }
 @keyframes circle {
   0% {
     transform: rotate(-360deg);
-    animation-direction: alternate;
   }
   100% {
     transform: rotate(0deg);
-    animation-direction: alternate;
   }
 }
 
