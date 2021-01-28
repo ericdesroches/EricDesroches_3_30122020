@@ -22,24 +22,39 @@
 }
 #circle1 {
   background-color: #9356dc;
-  animation: B1 750ms infinite;
+  animation: B1 500ms infinite;
   animation-delay: 100ms;
-  animation-iteration-count: 5;
+  animation-iteration-count: 8;
 }
 #circle2 {
   background-color: #ff79da;
-  animation: B1 750ms infinite;
+  animation: B1 500ms infinite;
   animation-delay: 200ms;
-  animation-iteration-count: 5;
+  animation-iteration-count: 8;
 }
 #circle3 {
   background-color: #99e2d0;
-  animation: B1 750ms infinite;
+  animation: B1 500ms infinite;
   animation-delay: 300ms;
-  animation-iteration-count: 5;
+  animation-iteration-count: 8;
 }
-@keyframes B1 {
+@keyframes B1 { /* animation spinner 3 cercles */
   0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#container_index { 
+  animation: B2 5s;
+  position: relative;
+}
+@keyframes B2 { /* fond blanc masque la page accueil 5s pendant animation spinner */
+  0% {
+    opacity: 0;
+  }
+  75% {
     opacity: 0;
   }
   100% {
@@ -51,18 +66,6 @@
 body {
   font-family: Roboto, sans-serif;
   margin: auto;
-}
-#container_index {
-  animation: B2 3s;
-  position: relative;
-}
-@keyframes B2 {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 header {
   display: flex;
@@ -100,6 +103,9 @@ header {
   font-weight: 700;
   background-color: #f6f6f6;
 }
+
+/* Au survol, la couleur de fond des boutons principaux devra légèrement s’éclaircir. */
+/* L’ombre portée devra également être plus visible. */
 #explore,
 #commander {
   display: flex;
@@ -119,19 +125,22 @@ header {
   box-shadow: inset -10px -10px 30px 5px #9356dc,
     1px 1px 10px 1px rgb(75, 75, 75);
   margin-bottom: 30px;
+  transition: 1s;
 }
 #button_explore:hover,
 #button_commander:hover {
-  /* Au survol, la couleur de fond des boutons principaux devra légèrement s’éclaircir. */
-  /* L’ombre portée devra également être plus visible. */
   background-color: #ffa9e7;
   box-shadow: inset -10px -10px 30px 5px #b881fa,
     1px 3px 10px 1px rgb(49, 49, 49);
-  transition: 1s;
 }
+/* FIN - Au survol, ... */
+
 #fonctionnement {
   padding: 15px;
 }
+
+/* Au survol, la couleur de fond des boutons principaux devra légèrement s’éclaircir. */
+/* L’ombre portée devra également être plus visible. */
 .button {
   display: flex;
   justify-content: flex-start;
@@ -144,8 +153,6 @@ header {
   margin: 15px;
 }
 .button:hover {
-  /* Au survol, la couleur de fond des boutons principaux devra légèrement s’éclaircir. */
-  /* L’ombre portée devra également être plus visible. */
   background-color: #f3e3fd;
   box-shadow: 1px 3px 10px 1px rgb(75, 75, 75);
   transition: 2s;
@@ -175,7 +182,9 @@ header {
 .fa-store:hover {
   color: #9356dc;
   padding: 15px;
-}
+} 
+/* FIN - Au survol, ... */
+
 .text_fonctionnement {
   font-weight: 700;
 }
@@ -270,8 +279,10 @@ h3 {
   margin: 5px;
 }
 .p1 {
-  margin: 2px 2px 2px 0px;
+  margin: 2px 2px 2px 5px;
 }
+
+/* bouton "J’aime" en forme de coeur : remplissage progressif */
 .far.fa-heart {
   font-size: 1.5em;
   display: block;
@@ -292,7 +303,10 @@ h3 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: 1s;
+  animation-fill-mode: backwards;
 }
+/* FIN - bouton "J’aime" en forme de coeur : remplissage progressif */
+
 footer {
   background-color: #353535;
   padding: 20px 15px;
@@ -375,7 +389,7 @@ a {
 .menu_container2 {
   animation: A1 1500ms;
 }
-@keyframes A1 {
+@keyframes A1 { /* A1 pour masquer le fond du container */
   0% {
     opacity: 0;
   }
@@ -383,29 +397,13 @@ a {
     opacity: 0;
   }
 }
-/* ANIMATION decalage menu -  ANIMATION decalage menu - ANIMATION decalage menu */
 #entrees,
 #plats,
 #desserts {
   width: auto;
   height: auto;
   margin-bottom: 40px;
-  /*animation: A2 3s;
-  animation-delay: 2s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in-out;*/
 }
-/*@keyframes A2 {
-  0% {
-    opacity: 0;
-    margin-top: 100px;
-  }
-  100% {
-    opacity: 1;
-    margin-top: 0px;
-  }
-}*/
-
 .trait_vert {
   display: flex;
   border-bottom: solid 4px #99e2d0;
@@ -469,7 +467,7 @@ a {
   animation-delay: 1500ms;
 }
 
-@keyframes A3 /* fondu + déplacement vers le haut*/ {
+@keyframes A3 { /* apparition progressive des plats (opacity) + déplacement vers le haut (margin-top) */
   0% {
     opacity: 0;
     margin: 30px 0px;
@@ -483,13 +481,16 @@ a {
     margin: 15px 0px;
   }
 }
+/* FIN - apparition progressive... */
+
+/* animation décalage texte des plats vers la gauche */
 .text_plat {
   padding: 0px;
   overflow: hidden;
   transition: width 1s;
   width: 100%;
 }
-/* animation décalage texte vers la gauche */
+
 .plat1:hover .text_plat,
 .plat2:hover .text_plat,
 .plat3:hover .text_plat,
@@ -512,7 +513,7 @@ a {
   white-space: nowrap;
 }
 
-/* Animation check box */ /* Animation check box */ /* Animation check box */
+/* Animation check box + prix */ /* Animation check box + prix */ /* Animation check box + prix */
 .price {
   font-weight: bold;
   display: flex;
@@ -544,7 +545,6 @@ a {
 .plat3:hover .check,
 .plat4:hover .check {
   transform: translate(-50px);
-  transition: 1s;
 }
 .green_bkg {
   display: flex;
@@ -554,20 +554,22 @@ a {
   width: 50px;
   height: 60px;
 }
-.circle {
+
+/* Animation (Transition) rotation cercle check box */ /* Animation rotation cercle check box */ /* Animation rotation cercle check box */
+/*.circle {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   color: white;
   font-size: 1.2em;
-  /*transition: 1s;*/
+  transition: 1s;
 }
-/* Animation rotation cercle check box */ /* Animation rotation cercle check box */ /* Animation rotation cercle check box */
 .plat1:hover .circle,
 .plat2:hover .circle,
 .plat3:hover .circle,
 .plat4:hover .circle {
   animation: circle 1s;
+  transition: 1s;
 }
 @keyframes circle {
   0% {
@@ -576,6 +578,21 @@ a {
   100% {
     transform: rotate(0deg);
   }
+}*/
+.circle {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
+  font-size: 1.2em;
+  transform: rotate(-360deg);
+  transition: 1s;
+}
+.plat1:hover .circle,
+.plat2:hover .circle,
+.plat3:hover .circle,
+.plat4:hover .circle {
+  transform: rotate(0deg);
 }
 
 @media all and (min-width: 768px) and (max-width: 1023px) {
