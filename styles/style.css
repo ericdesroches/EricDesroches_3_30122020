@@ -38,7 +38,8 @@
   animation-delay: 300ms;
   animation-iteration-count: 8;
 }
-@keyframes B1 { /* animation spinner 3 cercles */
+@keyframes B1 {
+  /* animation spinner 3 cercles */
   0% {
     opacity: 0;
   }
@@ -46,11 +47,12 @@
     opacity: 1;
   }
 }
-#container_index { 
-  animation: B2 5s;
+#container_index {
+  animation: B2 3s;
   position: relative;
 }
-@keyframes B2 { /* fond blanc masque la page accueil 5s pendant animation spinner */
+@keyframes B2 {
+  /* fond blanc masque la page accueil 3s pendant animation spinner */
   0% {
     opacity: 0;
   }
@@ -151,11 +153,11 @@ header {
   background-color: #f6f6f6;
   box-shadow: 1px 1px 10px 1px gray;
   margin: 15px;
+  transition: 1s;
 }
 .button:hover {
   background-color: #f3e3fd;
   box-shadow: 1px 3px 10px 1px rgb(75, 75, 75);
-  transition: 2s;
 }
 .button:hover i {
   color: #631fb6;
@@ -176,13 +178,14 @@ header {
 .fa-store {
   color: #727272;
   padding: 15px;
+  transition: 1s;
 }
 .fa-mobile-alt:hover,
 .fa-list:hover,
 .fa-store:hover {
   color: #9356dc;
   padding: 15px;
-} 
+}
 /* FIN - Au survol, ... */
 
 .text_fonctionnement {
@@ -303,7 +306,6 @@ h3 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: 1s;
-  animation-fill-mode: backwards;
 }
 /* FIN - bouton "J’aime" en forme de coeur : remplissage progressif */
 
@@ -389,7 +391,8 @@ a {
 .menu_container2 {
   animation: A1 1500ms;
 }
-@keyframes A1 { /* A1 pour masquer le fond du container */
+@keyframes A1 {
+  /* A1 pour masquer le fond du container */
   0% {
     opacity: 0;
   }
@@ -467,7 +470,8 @@ a {
   animation-delay: 1500ms;
 }
 
-@keyframes A3 { /* apparition progressive des plats (opacity) + déplacement vers le haut (margin-top) */
+@keyframes A3 {
+  /* apparition progressive des plats (opacity) + déplacement vers le haut (margin-top) */
   0% {
     opacity: 0;
     margin: 30px 0px;
@@ -483,14 +487,13 @@ a {
 }
 /* FIN - apparition progressive... */
 
-/* animation décalage texte des plats vers la gauche */
+/* animation gestion largeur du contenu des textes plats vers la gauche */
 .text_plat {
   padding: 0px;
   overflow: hidden;
   transition: width 1s;
   width: 100%;
 }
-
 .plat1:hover .text_plat,
 .plat2:hover .text_plat,
 .plat3:hover .text_plat,
@@ -556,29 +559,7 @@ a {
 }
 
 /* Animation (Transition) rotation cercle check box */ /* Animation rotation cercle check box */ /* Animation rotation cercle check box */
-/*.circle {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  color: white;
-  font-size: 1.2em;
-  transition: 1s;
-}
-.plat1:hover .circle,
-.plat2:hover .circle,
-.plat3:hover .circle,
-.plat4:hover .circle {
-  animation: circle 1s;
-  transition: 1s;
-}
-@keyframes circle {
-  0% {
-    transform: rotate(-360deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}*/
+
 .circle {
   display: flex;
   justify-content: flex-end;
