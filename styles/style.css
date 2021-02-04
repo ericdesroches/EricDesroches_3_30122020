@@ -160,7 +160,7 @@ header {
   box-shadow: 1px 3px 10px 1px rgb(75, 75, 75);
 }
 .button:hover i {
-  color: #631fb6;
+  color: #9356dc;
 }
 .number {
   display: flex;
